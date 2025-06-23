@@ -1479,7 +1479,7 @@ section {
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
-  transition: all 0.6s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .fade-in.visible {
