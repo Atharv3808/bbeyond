@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B'Beyond Family Salon - Style Redefined</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="scissors">
+                <i class="fas fa-cut"></i>
+            </div>
+            <p>B'Beyond</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>B'Beyond</h2>
+                <span>Family Salon</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#book-now" class="nav-link book-btn">Book Now</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Style Redefined</span>
+                    <span class="title-line">at B'Beyond</span>
+                </h1>
+                <p class="hero-subtitle">Where grooming meets artistry, and every visit transforms you into your best self</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('services')">Explore Services</button>
+                    <button class="btn btn-secondary" onclick="openBookingModal()">Book Appointment</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-target="500">0</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="5">0</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="15">0</span>
+                        <span class="stat-label">Expert Stylists</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" onclick="scrollToSection('about')">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Story</span>
+                <h2 class="section-title">About B'Beyond Family Salon</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">Founded with a passion for beauty and a commitment to excellence, B'Beyond Family Salon has been transforming lives through the art of grooming for over five years.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Family-Friendly Environment</h4>
+                                <p>A welcoming space where every family member feels comfortable and cared for.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Expert Stylists</h4>
+                                <p>Our team of certified professionals stays updated with the latest trends and techniques.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Natural Products</h4>
+                                <p>We use premium, eco-friendly products that nourish your hair and skin.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-container">
+                        <img src="Screenshot 2025-06-23 at 6.55.15 PM.png" alt="B'Beyond Salon Interior" class="main-image">
+                        <div class="floating-card">
+                            <i class="fas fa-award"></i>
+                            <span>Award Winning Salon</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">What We Offer</span>
+                <h2 class="section-title">Our Premium Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-service="haircut">
+                    <div class="service-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3>Hair Styling & Cuts</h3>
+                    <p>Professional cuts and styling for all hair types, from classic to contemporary looks.</p>
+                    <div class="service-price">Starting from $25</div>
+                    <button class="service-btn">Learn More</button>
+                </div>
+                <div class="service-card" data-service="coloring">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Hair Coloring</h3>
+                    <p>Expert coloring services including highlights, balayage, and complete color transformations.</p>
+                    <div class="service-price">Starting from $45</div>
+                    <button class="service-btn">Learn More</button>
+                </div>
+                <div class="service-card" data-service="facial">
+                    <div class="service-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3>Facial Treatments</h3>
+                    <p>Rejuvenating facial treatments using natural products for glowing, healthy skin.</p>
+                    <div class="service-price">Starting from $35</div>
+                    <button class="service-btn">Learn More</button>
+                </div>
+                <div class="service-card" data-service="manicure">
+                    <div class="service-icon">
+                        <i class="fas fa-hand-sparkles"></i>
+                    </div>
+                    <h3>Nail Care</h3>
+                    <p>Complete nail care services including manicures, pedicures, and nail art.</p>
+                    <div class="service-price">Starting from $20</div>
+                    <button class="service-btn">Learn More</button>
+                </div>
+                <div class="service-card" data-service="massage">
+                    <div class="service-icon">
+                        <i class="fas fa-hands"></i>
+                    </div>
+                    <h3>Relaxation Massage</h3>
+                    <p>Therapeutic massages to relieve stress and rejuvenate your body and mind.</p>
+                    <div class="service-price">Starting from $40</div>
+                    <button class="service-btn">Learn More</button>
+                </div>
+                <div class="service-card" data-service="bridal">
+                    <div class="service-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>Bridal Packages</h3>
+                    <p>Complete bridal makeover packages for your special day, including trial sessions.</p>
+                    <div class="service-price">Starting from $150</div>
+                    <button class="service-btn">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Work</span>
+                <h2 class="section-title">Transformation Gallery</h2>
+            </div>
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="haircuts">Haircuts</button>
+                <button class="filter-btn" data-filter="coloring">Coloring</button>
+                <button class="filter-btn" data-filter="bridal">Bridal</button>
+                <button class="filter-btn" data-filter="styling">Styling</button>
+            </div>
+            <div class="gallery-grid" id="gallery-grid">
+                <div class="gallery-item" data-category="haircuts">
+                    <div class="before-after">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Before" class="before-image">
+                        <img src="/placeholder.svg?height=300&width=400" alt="After" class="after-image">
+                        <div class="comparison-slider">
+                            <div class="slider-handle"></div>
+                        </div>
+                        <div class="labels">
+                            <span class="before-label">Before</span>
+                            <span class="after-label">After</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="coloring">
+                    <div class="before-after">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Before" class="before-image">
+                        <img src="/placeholder.svg?height=300&width=400" alt="After" class="after-image">
+                        <div class="comparison-slider">
+                            <div class="slider-handle"></div>
+                        </div>
+                        <div class="labels">
+                            <span class="before-label">Before</span>
+                            <span class="after-label">After</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="bridal">
+                    <div class="before-after">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Before" class="before-image">
+                        <img src="/placeholder.svg?height=300&width=400" alt="After" class="after-image">
+                        <div class="comparison-slider">
+                            <div class="slider-handle"></div>
+                        </div>
+                        <div class="labels">
+                            <span class="before-label">Before</span>
+                            <span class="after-label">After</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="styling">
+                    <div class="before-after">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Before" class="before-image">
+                        <img src="/placeholder.svg?height=300&width=400" alt="After" class="after-image">
+                        <div class="comparison-slider">
+                            <div class="slider-handle"></div>
+                        </div>
+                        <div class="labels">
+                            <span class="before-label">Before</span>
+                            <span class="after-label">After</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="haircuts">
+                    <div class="before-after">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Before" class="before-image">
+                        <img src="/placeholder.svg?height=300&width=400" alt="After" class="after-image">
+                        <div class="comparison-slider">
+                            <div class="slider-handle"></div>
+                        </div>
+                        <div class="labels">
+                            <span class="before-label">Before</span>
+                            <span class="after-label">After</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="coloring">
+                    <div class="before-after">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Before" class="before-image">
+                        <img src="/placeholder.svg?height=300&width=400" alt="After" class="after-image">
+                        <div class="comparison-slider">
+                            <div class="slider-handle"></div>
+                        </div>
+                        <div class="labels">
+                            <span class="before-label">Before</span>
+                            <span class="after-label">After</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Client Reviews</span>
+                <h2 class="section-title">What Our Clients Say</h2>
+            </div>
+            <div class="testimonials-slider" id="testimonials-slider">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Absolutely amazing experience! The staff is so professional and the results exceeded my expectations. I've been coming here for 2 years now and wouldn't go anywhere else."</p>
+                        <div class="testimonial-author">
+                            <img src="/placeholder.svg?height=60&width=60" alt="Sarah Johnson">
+                            <div class="author-info">
+                                <h4>Sarah Johnson</h4>
+                                <span>Regular Client</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The bridal package was perfect for my wedding day. The team made me feel like a princess and the makeup lasted all day. Highly recommend for special occasions!"</p>
+                        <div class="testimonial-author">
+                            <img src="/placeholder.svg?height=60&width=60" alt="Emily Davis">
+                            <div class="author-info">
+                                <h4>Emily Davis</h4>
+                                <span>Bride</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Great family salon! They take care of everyone from kids to adults. The atmosphere is so welcoming and the prices are very reasonable. Love this place!"</p>
+                        <div class="testimonial-author">
+                            <img src="/p" alt="Michael Brown">
+                            <div class="author-info">
+                                <h4>Michael Brown</h4>
+                                <span>Family Client</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-controls">
+                <button class="testimonial-btn prev" onclick="changeTestimonial(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="testimonial-dots">
+                    <span class="dot active" onclick="currentTestimonial(1)"></span>
+                    <span class="dot" onclick="currentTestimonial(2)"></span>
+                    <span class="dot" onclick="currentTestimonial(3)"></span>
+                </div>
+                <button class="testimonial-btn next" onclick="changeTestimonial(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Get In Touch</span>
+                <h2 class="section-title">Contact Us</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Visit Us</h4>
+                            <p>123 Beauty Street<br>Downtown City, DC 12345</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Call Us</h4>
+                            <p>(555) 123-4567<br>(555) 987-6543</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email Us</h4>
+                            <p>info@bbeyondsalon.com<br>bookings@bbeyondsalon.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Opening Hours</h4>
+                            <p>Mon-Fri: 9:00 AM - 8:00 PM<br>Sat-Sun: 10:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Full Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email Address</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" required>
+                            <label for="phone">Phone Number</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="service" name="service" required>
+                                <option value="">Select Service</option>
+                                <option value="haircut">Hair Styling & Cuts</option>
+                                <option value="coloring">Hair Coloring</option>
+                                <option value="facial">Facial Treatments</option>
+                                <option value="nails">Nail Care</option>
+                                <option value="massage">Relaxation Massage</option>
+                                <option value="bridal">Bridal Package</option>
+                            </select>
+                            <label for="service">Preferred Service</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h3>Stay Updated with Beauty Tips & Offers</h3>
+                    <p>Subscribe to our newsletter for exclusive deals and styling tips</p>
+                </div>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3>B'Beyond</h3>
+                        <span>Family Salon</span>
+                    </div>
+                    <p>Where grooming meets style. Experience the art of beauty transformation in a warm, family-friendly environment.</p>
+                    <!-- <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>  -->
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Hair Styling</a></li>
+                        <li><a href="#services">Hair Coloring</a></li>
+                        <li><a href="#services">Facial Treatments</a></li>
+                        <li><a href="#services">Nail Care</a></li>
+                        <li><a href="#services">Bridal Packages</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Beauty Street, Downtown City</p>
+                        <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> info@bbeyondsalon.com</p>
+                        <p><i class="fas fa-clock"></i> Mon-Fri: 9AM-8PM</p>
+                    </div>
+                    <div class="footer-owner-info" style="margin-top: 15px; font-size: 0.9em; color: #ccc;">
+                        <p><strong>Owner:</strong> Gauresh Pingulkar</p>
+                        <p><strong>Contact:</strong> 9637720097</p>
+                        <p><strong>Address:</strong> Unnamed Road, Kelbaiwadi, Kudal, Maharashtra 416520</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 B'Beyond Family Salon. All rights reserved. | Where grooming meets style.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Back to Top Button
+    <div class="back-to-top" id="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-chevron-up"></i>
+        <div class="progress-ring">
+            <svg>
+                <circle cx="25" cy="25" r="20"></circle>
+            </svg>
+        </div>
+    </div> -->
+
+    <!-- Booking Modal -->
+    <div class="modal" id="booking-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Book Your Appointment</h3>
+                <span class="close" onclick="closeBookingModal()">&times;</span>
+            </div>
+            <form class="booking-form" id="booking-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" id="booking-name" name="name" required>
+                        <label for="booking-name">Full Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="booking-email" name="email" required>
+                        <label for="booking-email">Email</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="tel" id="booking-phone" name="phone" required>
+                        <label for="booking-phone">Phone</label>
+                    </div>
+                    <div class="form-group">
+                        <select id="booking-service" name="service" required>
+                            <option value="">Select Service</option>
+                            <option value="haircut">Hair Styling & Cuts - $25+</option>
+                            <option value="coloring">Hair Coloring - $45+</option>
+                            <option value="facial">Facial Treatments - $35+</option>
+                            <option value="nails">Nail Care - $20+</option>
+                            <option value="massage">Relaxation Massage - $40+</option>
+                            <option value="bridal">Bridal Package - $150+</option>
+                        </select>
+                        <label for="booking-service">Service</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="date" id="booking-date" name="date" required>
+                        <label for="booking-date">Preferred Date</label>
+                    </div>
+                    <div class="form-group">
+                        <select id="booking-time" name="time" required>
+                            <option value="">Select Time</option>
+                            <option value="09:00">9:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="12:00">12:00 PM</option>
+                            <option value="13:00">1:00 PM</option>
+                            <option value="14:00">2:00 PM</option>
+                            <option value="15:00">3:00 PM</option>
+                            <option value="16:00">4:00 PM</option>
+                            <option value="17:00">5:00 PM</option>
+                            <option value="18:00">6:00 PM</option>
+                        </select>
+                        <label for="booking-time">Preferred Time</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea id="booking-notes" name="notes" rows="3"></textarea>
+                    <label for="booking-notes">Special Requests (Optional)</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
